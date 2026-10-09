@@ -1,0 +1,195 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ *
+ * Tripwire design system
+ * Vibe: OLED-black "mission console" — hairline rules, glass plates,
+ * monospace data, and one warm signal colour that only ever means risk.
+ * ------------------------------------------------------------------ */
+
+@theme {
+  --color-void: #050506;
+  --color-carbon: #0a0a0c;
+  --color-slate-panel: #101014;
+
+  --color-ink-100: #f4f4f5;
+  --color-ink-300: #c9c9d1;
+  --color-ink-500: #8b8b98;
+  --color-ink-700: #55555f;
+
+  --color-hairline: rgba(255, 255, 255, 0.09);
+  --color-hairline-strong: rgba(255, 255, 255, 0.16);
+
+  --color-signal-low: #34d399;
+  --color-signal-guard: #fbbf24;
+  --color-signal-high: #fb923c;
+  --color-signal-critical: #f43f5e;
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-display: var(--font-instrument-serif), ui-serif, Georgia, serif;
+
+  --ease-fluid: cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-snap: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-hairline);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: var(--color-void);
+    color: var(--color-ink-100);
+    font-family: var(--font-sans);
+    font-feature-settings: "cv11", "ss01";
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: rgba(244, 63, 94, 0.28);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 1px solid rgba(255, 255, 255, 0.55);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+    background-clip: content-box;
+  }
+}
+
+@layer components {
+  /* Double-bezel: a machined outer shell holding a glass core. */
+  .plate {
+    position: relative;
+    border-radius: 1.75rem;
+    background: rgba(255, 255, 255, 0.028);
+    border: 1px solid var(--color-hairline);
+    padding: 6px;
+    box-shadow:
+      0 1px 0 0 rgba(255, 255, 255, 0.04) inset,
+      0 30px 60px -40px rgba(0, 0, 0, 0.9);
+  }
+
+  .plate-core {
+    position: relative;
+    height: 100%;
+    border-radius: calc(1.75rem - 6px);
+    background: linear-gradient(
+      170deg,
+      rgba(255, 255, 255, 0.045) 0%,
+      rgba(10, 10, 14, 0.9) 46%,
+      rgba(5, 5, 7, 0.98) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.07);
+    overflow: hidden;
+  }
+
+  /* Eyebrow label */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 999px;
+    border: 1px solid var(--color-hairline);
+    padding: 0.3rem 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    line-height: 1;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-ink-500);
+  }
+
+  .hairline {
+    border-top: 1px solid var(--color-hairline);
+  }
+
+  /* Data chips */
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    border-radius: 999px;
+    border: 1px solid var(--color-hairline);
+    background: rgba(255, 255, 255, 0.025);
+    padding: 0.25rem 0.6rem;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-ink-500);
+    white-space: nowrap;
+  }
+
+  .rule-grid {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  .scanlines {
+    background-image: repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.03) 0px,
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .mask-fade-r {
+    -webkit-mask-image: linear-gradient(to right, black 65%, transparent 100%);
+    mask-image: linear-gradient(to right, black 65%, transparent 100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
