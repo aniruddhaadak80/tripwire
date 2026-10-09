@@ -1,4 +1,8 @@
 import Link from "next/link";
+import { ExternalLink } from "lucide-react";
+
+/** Latest corpus revision, shown in the footer. */
+const REV_DATE = "9 Oct 2026";
 
 export function Footer({
   counts,
@@ -41,6 +45,17 @@ export function Footer({
                 </Link>
               </li>
             ))}
+            <li>
+              <a
+                href="https://github.com/aniruddhaadak80/tripwire"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="inline-flex items-center gap-1.5 text-sm text-ink-300 transition-colors duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:text-ink-100"
+              >
+                Source on GitHub
+                <ExternalLink className="size-3" strokeWidth={1.5} />
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -56,7 +71,9 @@ export function Footer({
       </div>
 
       <div className="mx-auto flex max-w-6xl flex-col gap-3 border-t border-hairline px-5 py-8 font-mono text-[10px] uppercase tracking-[0.18em] text-ink-700 md:flex-row md:items-center md:justify-between md:px-8">
-        <span>Open source · MIT licensed · built as a public-good reference</span>
+        <span>
+          Revised {REV_DATE} · open source · MIT · built as a public-good reference
+        </span>
         <span>Not medical, legal, or financial advice</span>
       </div>
     </footer>

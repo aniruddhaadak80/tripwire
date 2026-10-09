@@ -38,7 +38,8 @@ export async function generateMetadata({
   return {
     title: risk.title,
     description: risk.summary,
-    openGraph: { title: `${risk.title} · Tripwire`, description: risk.summary },
+    alternates: { canonical: `/risk/${risk.slug}` },
+    openGraph: { title: `${risk.title} · Tripwire`, description: risk.summary, url: `/risk/${risk.slug}` },
   };
 }
 

@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Preparedness",
   description:
     "Every precaution in the atlas that a person can actually act on, pulled into one checklist with a readiness score and an export. Runs entirely in your browser.",
+  alternates: { canonical: "/prepare" },
 };
 
 export default function PreparePage() {

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { risks } from "@/data";
 
-const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://tripwire.vercel.app";
+const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://tripwire-atlas.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [

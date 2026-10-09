@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Signals board",
   description:
     "Every early-warning indicator Tripwire tracks, ordered by how loud they are: measurement, current reading, trend history and why it matters.",
+  alternates: { canonical: "/signals" },
 };
 
 export default function SignalsPage() {

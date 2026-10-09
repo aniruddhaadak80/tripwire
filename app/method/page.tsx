@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Scoring method",
   description:
     "Exactly how Tripwire scores exposure, action priority, signal status and mitigation maturity — plus the editorial rules every entry has to pass.",
+  alternates: { canonical: "/method" },
 };
 
 const RULES = [

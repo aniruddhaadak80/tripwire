@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "The atlas",
   description:
     "Every failure mode Tripwire tracks, ranked and filterable: AI loss of control, climate tipping points, ransomware, sovereign debt, pandemics, grid cascades and personal exposure.",
+  alternates: { canonical: "/atlas" },
 };
 
 export default function AtlasPage() {

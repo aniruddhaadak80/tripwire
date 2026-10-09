@@ -27,7 +27,7 @@ const DESCRIPTION =
   "Tripwire is an atlas of everything that could go wrong — climate tipping points, AI loss of control, ransomware, sovereign debt, pandemics, grid cascades — each with measurable warning signs, concrete precautions, and the mitigations that are actually working.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://tripwire.vercel.app"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://tripwire-atlas.vercel.app"),
   title: {
     default: "Tripwire — an atlas of everything that could go wrong",
     template: "%s · Tripwire",
@@ -47,11 +47,15 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Aniruddha Adak" }],
   creator: "Aniruddha Adak",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     title: "Tripwire — an atlas of everything that could go wrong",
     description: DESCRIPTION,
     siteName: "Tripwire",
+    url: "/",
   },
   twitter: {
     card: "summary_large_image",
