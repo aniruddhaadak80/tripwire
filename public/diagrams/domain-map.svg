@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" font-family="ui-sans-serif, system-ui, sans-serif">
+  <defs>
+    <radialGradient id="wash" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#f43f5e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="#0a0a0c"/>
+  <rect width="1200" height="675" fill="url(#wash)"/>
+  <g stroke="rgba(255,255,255,0.045)" stroke-width="1">
+    <path d="M0 168.75 H1200 M0 337.5 H1200 M0 506.25 H1200"/>
+    <path d="M300 0 V675 M600 0 V675 M900 0 V675"/>
+  </g>
+
+  <text x="600" y="52" text-anchor="middle" font-size="30" font-weight="300" fill="#f4f4f5">The ten watch domains</text>
+  <text x="600" y="80" text-anchor="middle" font-size="15" fill="#8b8b98">Mean exposure per domain · highest-exposure entry shown · click any card in the app</text>
+
+  <!-- grid of 10 domain cards: 5 cols x 2 rows -->
+  <g font-size="12">
+    <!-- Row 1 -->
+    <g transform="translate(60,120)">
+      <rect width="200" height="180" rx="16" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.10)"/>
+      <text x="18" y="30" font-size="11" letter-spacing="2" fill="#a78bfa">MACHINE INTELLIGENCE</text>
+      <text x="18" y="58" font-size="26" fill="#f4f4f5">51</text>
+      <text x="18" y="78" font-size="11" fill="#8b8b98">mean exposure · 6 entries</text>
+      <text x="18" y="112" font-size="12.5" fill="#c9c9d1">Top: Evaluation gaming</text>
+      <text x="18" y="132" font-size="12.5" fill="#c9c9d1">and ginned benchmarks</text>
+      <text x="18" y="160" font-size="11" fill="#f43f5e">76 exposure</text>
+    </g>
+    <g transform="translate(300,120)">
+      <rect width="200" height="180" rx="16" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.10)"/>
+      <text x="18" y="30" font-size="11" letter-spacing="2" fill="#fb7185">CLIMATE &amp; EARTH SYSTEMS</text>
+      <text x="18" y="58" font-size="26" fill="#f4f4f5">63</text>
+      <text x="18" y="78" font-size="11" fill="#8b8b98">mean exposure · 6 entries</text>
+      <text x="18" y="112" font-size="12.5" fill="#c9c9d1">Top: Runaway heat domes</text>
+      <text x="18" y="160" font-size="11" fill="#f43f5e">82 exposure</text>
+    </g>
+    <g transform="translate(540,120)">
+      <rect width="200" height="180" rx="16" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.10)"/>
+      <text x="18" y="30" font-size="11" letter-spacing="2" fill="#34d399">BIOLOGY &amp; PANDEMICS</text>
+      <text x="18" y="58" font-size="26" fill="#f4f4f5">64</text>
+      <text x="18" y="78" font-size="11" fill="#8b8b98">mean exposure · 3 entries</text>
+      <text x="18" y="112" font-size="12.5" fill="#c9c9d1">Top: Antimicrobial</text>
+      <text x="18" y="132" font-size="12.5" fill="#c9c9d1">resistance</text>
+      <text x="18" y="160" font-size="11" fill="#f43f5e">87 exposure</text>
+    </g>
+    <g transform="translate(780,120)">
+      <rect width="200" height="180" rx="16" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.10)"/>
+      <text x="18" y="30" font-size="11" letter-spacing="2" fill="#38bdf8">CYBER &amp; INFRASTRUCTURE</text>
+      <text x="18" y="58" font-size="26" fill="#f4f4f5">85</text>
+      <text x="18" y="78" font-size="11" fill="#8b8b98">mean exposure · 5 entries</text>
+      <text x="18" y="112" font-size="12.5" fill="#c9c9d1">Top: Ransomware as an</text>
+      <text x="18" y="132" font-size="12.5" fill="#c9c9d1">infrastructure outage</text>
+      <text x="18" y="160" font-size="11" fill="#f43f5e">90 exposure</text>
+    </g>
+    <g transform="translate(1020,120)">
+      <rect width="200" height="180" rx="16" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.10)"/>
+      <text x="18" y="30" font-size="11" letter-spacing="2" fill="#fbbf24">NUCLEAR &amp; MATERIAL RISK</text>
+      <text x="18" y="58" font-size="26" fill="#f4f4f5">34</text>
+      <text x="18" y="78" font-size="11" fill="#8b8b98">mean exposure · 3 entries</text>
+      <text x="18" y="112" font-size="12.5" fill="#c9c9d1">Top: Miscalculation and</text>
+      <text x="18" y="132" font-size="12.5" fill="#c9c9d1">false alarm escalation</text>
+      <text x="18" y="160" font-size="11" fill="#f43f5e">41 exposure</text>
+    </g>
+
+    <!-- Row 2 -->
+    <g transform="translate(60,330)">
+      <rect width="200" height="180" rx="16" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.10)"/>
+      <text x="18" y="30" font-size="11" letter-spacing="2" fill="#22d3ee">FINANCIAL SYSTEM</text>
+      <text x="18" y="58" font-size="26" fill="#f4f4f5">67</text>
+      <text x="18" y="78" font-size="11" fill="#8b8b98">mean exposure · 5 entries</text>
+      <text x="18" y="112" font-size="12.5" fill="#c9c9d1">Top: Liquidity fragility</text>
+      <text x="18" y="132" font-size="12.5" fill="#c9c9d1">and the speed of contagion</text>
+      <text x="18" y="160" font-size="11" fill="#f43f5e">74 exposure</text>
+    </g>
+    <g transform="translate(300,330)">
+      <rect width="200" height="180" rx="16" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.10)"/>
+      <text x="18" y="30" font-size="11" letter-spacing="2" fill="#f472b6">INFORMATION &amp; SOCIETY</text>
+      <text x="18" y="58" font-size="26" fill="#f4f4f5">82</text>
+      <text x="18" y="78" font-size="11" fill="#8b8b98">mean exposure · 4 entries</text>
+      <text x="18" y="112" font-size="12.5" fill="#c9c9d1">Top: Synthetic evidence</text>
+      <text x="18" y="132" font-size="12.5" fill="#c9c9d1">and the visual record</text>
+      <text x="18" y="160" font-size="11" fill="#f43f5e">86 exposure</text>
+    </g>
+    <g transform="translate(540,330)">
+      <rect width="200" height="180" rx="16" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.10)"/>
+      <text x="18" y="30" font-size="11" letter-spacing="2" fill="#94a3b8">PHYSICAL INFRASTRUCTURE</text>
+      <text x="18" y="58" font-size="26" fill="#f4f4f5">68</text>
+      <text x="18" y="78" font-size="11" fill="#8b8b98">mean exposure · 4 entries</text>
+      <text x="18" y="112" font-size="12.5" fill="#c9c9d1">Top: Grid overload and</text>
+      <text x="18" y="132" font-size="12.5" fill="#c9c9d1">cascading failure</text>
+      <text x="18" y="160" font-size="11" fill="#f43f5e">82 exposure</text>
+    </g>
+    <g transform="translate(780,330)">
+      <rect width="200" height="180" rx="16" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.10)"/>
+      <text x="18" y="30" font-size="11" letter-spacing="2" fill="#818cf8">ORBIT &amp; SPACE WEATHER</text>
+      <text x="18" y="58" font-size="26" fill="#f4f4f5">55</text>
+      <text x="18" y="78" font-size="11" fill="#8b8b98">mean exposure · 3 entries</text>
+      <text x="18" y="112" font-size="12.5" fill="#c9c9d1">Top: GNSS interference</text>
+      <text x="18" y="132" font-size="12.5" fill="#c9c9d1">and navigation denial</text>
+      <text x="18" y="160" font-size="11" fill="#f43f5e">65 exposure</text>
+    </g>
+    <g transform="translate(1020,330)">
+      <rect width="200" height="180" rx="16" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.10)"/>
+      <text x="18" y="30" font-size="11" letter-spacing="2" fill="#4ade80">PERSONAL EXPOSURE</text>
+      <text x="18" y="58" font-size="26" fill="#f4f4f5">58</text>
+      <text x="18" y="78" font-size="11" fill="#8b8b98">mean exposure · 6 entries</text>
+      <text x="18" y="112" font-size="12.5" fill="#c9c9d1">Top: Identity theft</text>
+      <text x="18" y="160" font-size="11" fill="#f43f5e">69 exposure</text>
+    </g>
+  </g>
+
+  <!-- legend -->
+  <g transform="translate(60,560)">
+    <rect x="0" y="0" width="1080" height="72" rx="16" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.10)"/>
+    <text x="24" y="30" font-size="13" fill="#c9c9d1">Reading the board</text>
+    <text x="24" y="52" font-size="12" fill="#8b8b98">Exposure = likelihood × (0.62 + 0.38 × severity) × speed bump · Action priority = exposure × (1 − 0.7 × defence)</text>
+    <text x="700" y="30" font-size="13" fill="#c9c9d1">Bands</text>
+    <text x="700" y="52" font-size="12" fill="#8b8b98">critical ≥ 72 · elevated ≥ 56 · watch ≥ 40 · monitor below</text>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+name: Bug report
+description: UI, build or data-integrity problem
+labels: [bug]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: URL or route
+      placeholder: e.g. /risk/amoc-collapse
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs actual
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      placeholder: browser, OS, viewport

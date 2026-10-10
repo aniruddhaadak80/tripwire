@@ -1,0 +1,68 @@
+name: New risk proposal
+description: Propose a failure mode that should be on the board
+labels: [proposal]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The board covers 45 failure modes across 10 domains. Proposals need measurable warning signs and real sources — not vibes.
+  - type: input
+    id: title
+    attributes:
+      label: Failure mode
+      description: One sentence a stranger understands.
+      placeholder: e.g. Subsea cable and undersea infrastructure disruption
+    validations:
+      required: true
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domain
+      options:
+        - ai
+        - climate
+        - bio
+        - nuclear
+        - cyber
+        - finance
+        - info
+        - infrastructure
+        - space
+        - self
+    validations:
+      required: true
+  - type: textarea
+    id: signals
+    attributes:
+      label: Warning signs
+      description: At least three measurable indicators, each with a real source and a current reading.
+    validations:
+      required: true
+  - type: textarea
+    id: precautions
+    attributes:
+      label: Precautions
+      description: At least two audiences covered (you / org / policy), each with effort, impact and horizon.
+    validations:
+      required: true
+  - type: textarea
+    id: advancements
+    attributes:
+      label: Mitigations
+      description: At least two, with honest status (scaling / promising / stalled / regressed).
+    validations:
+      required: true
+  - type: textarea
+    id: timeline
+    attributes:
+      label: Timeline
+      description: At least three dated events, oldest to newest.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Primary sources
+      description: At least three authoritative links.
+    validations:
+      required: true

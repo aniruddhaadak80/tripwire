@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" font-family="ui-sans-serif, system-ui, sans-serif">
+  <defs>
+    <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#8b8b98"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="675" fill="#0a0a0c"/>
+  <g stroke="rgba(255,255,255,0.045)" stroke-width="1">
+    <path d="M0 168.75 H1200 M0 337.5 H1200 M0 506.25 H1200"/>
+    <path d="M240 0 V675 M480 0 V675 M720 0 V675 M960 0 V675"/>
+  </g>
+
+  <text x="600" y="52" text-anchor="middle" font-size="30" font-weight="300" fill="#f4f4f5">Data model</text>
+  <text x="600" y="80" text-anchor="middle" font-size="15" fill="#8b8b98">One typed shape per entry — the whole atlas is plain TypeScript, no database</text>
+
+  <!-- Risk -->
+  <rect x="60" y="120" width="360" height="300" rx="18" fill="rgba(244,63,94,0.08)" stroke="rgba(244,63,94,0.35)"/>
+  <text x="84" y="152" font-size="13" letter-spacing="3" fill="#f43f5e">RISK</text>
+  <g font-family="ui-monospace, monospace" font-size="12.5" fill="#c9c9d1">
+    <text x="84" y="182">slug · title · domain · tag</text>
+    <text x="84" y="206">summary · analysis[]</text>
+    <text x="84" y="230">likelihood · severity</text>
+    <text x="84" y="254">speed · defence</text>
+    <text x="84" y="278">onset · horizon · trend</text>
+    <text x="84" y="302">affected[] · related[]</text>
+    <text x="84" y="326">updated</text>
+  </g>
+  <text x="84" y="372" font-size="12" fill="#8b8b98">45 instances · 10 domains</text>
+  <text x="84" y="394" font-size="12" fill="#8b8b98">validated by scripts/validate.ts</text>
+
+  <!-- Signal -->
+  <rect x="480" y="120" width="320" height="300" rx="18" fill="rgba(251,191,36,0.08)" stroke="rgba(251,191,36,0.35)"/>
+  <text x="504" y="152" font-size="13" letter-spacing="3" fill="#fbbf24">SIGNAL</text>
+  <g font-family="ui-monospace, monospace" font-size="12.5" fill="#c9c9d1">
+    <text x="504" y="182">id · label · indicator</text>
+    <text x="504" y="206">reading · status</text>
+    <text x="504" y="230">trend · history[8–12]</text>
+    <text x="504" y="254">cadence · why</text>
+    <text x="504" y="278">source · sourceUrl</text>
+  </g>
+  <text x="504" y="330" font-size="12" fill="#8b8b98">180 instances</text>
+  <text x="504" y="352" font-size="12" fill="#8b8b98">status: quiet → elevated</text>
+  <text x="504" y="374" font-size="12" fill="#8b8b98">→ high → critical</text>
+
+  <!-- Precaution -->
+  <rect x="840" y="120" width="300" height="300" rx="18" fill="rgba(52,211,153,0.08)" stroke="rgba(52,211,153,0.35)"/>
+  <text x="864" y="152" font-size="13" letter-spacing="3" fill="#34d399">PRECAUTION</text>
+  <g font-family="ui-monospace, monospace" font-size="12.5" fill="#c9c9d1">
+    <text x="864" y="182">title · detail</text>
+    <text x="864" y="206">audience: you|org|policy</text>
+    <text x="864" y="230">effort · impact</text>
+    <text x="864" y="254">horizon · cadence?</text>
+  </g>
+  <text x="864" y="330" font-size="12" fill="#8b8b98">311 instances · 189 for you</text>
+  <text x="864" y="352" font-size="12" fill="#8b8b98">feeds /prepare checklist</text>
+  <text x="864" y="374" font-size="12" fill="#8b8b98">and the ⌘K search index</text>
+
+  <!-- Advancement -->
+  <rect x="480" y="470" width="320" height="150" rx="18" fill="rgba(56,189,248,0.08)" stroke="rgba(56,189,248,0.35)"/>
+  <text x="504" y="502" font-size="13" letter-spacing="3" fill="#38bdf8">ADVANCEMENT</text>
+  <g font-family="ui-monospace, monospace" font-size="12.5" fill="#c9c9d1">
+    <text x="504" y="532">title · detail · status</text>
+    <text x="504" y="556">progress 0–100 · date</text>
+    <text x="504" y="580">actor? · link?</text>
+  </g>
+  <text x="504" y="606" font-size="12" fill="#8b8b98">225 instances · stalled & regressed included</text>
+
+  <!-- Timeline + Source -->
+  <rect x="840" y="470" width="300" height="150" rx="18" fill="rgba(139,92,246,0.08)" stroke="rgba(139,92,246,0.35)"/>
+  <text x="864" y="502" font-size="13" letter-spacing="3" fill="#a78bfa">TIMELINE + SOURCES</text>
+  <g font-family="ui-monospace, monospace" font-size="12.5" fill="#c9c9d1">
+    <text x="864" y="532">TimelineEvent: date · title</text>
+    <text x="864" y="556">Source: label · url · year?</text>
+  </g>
+  <text x="864" y="606" font-size="12" fill="#8b8b98">267 events · 244 primary sources</text>
+
+  <!-- edges -->
+  <g stroke="#8b8b98" stroke-width="1.5" fill="none" marker-end="url(#arr2)">
+    <path d="M420 200 C 450 200, 450 200, 472 200"/>
+    <path d="M420 300 C 450 300, 450 260, 472 260"/>
+    <path d="M800 260 C 820 260, 820 260, 832 260"/>
+    <path d="M640 420 V 462"/>
+    <path d="M990 420 V 462"/>
+  </g>
+</svg>

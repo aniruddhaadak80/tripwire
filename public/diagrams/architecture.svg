@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" font-family="ui-sans-serif, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.7"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#8b8b98"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="675" fill="#0a0a0c"/>
+  <g stroke="rgba(255,255,255,0.045)" stroke-width="1">
+    <path d="M0 112.5 H1200 M0 225 H1200 M0 337.5 H1200 M0 450 H1200 M0 562.5 H1200"/>
+    <path d="M150 0 V675 M300 0 V675 M450 0 V675 M600 0 V675 M750 0 V675 M900 0 V675 M1050 0 V675"/>
+  </g>
+
+  <text x="600" y="52" text-anchor="middle" font-size="30" font-weight="300" letter-spacing="1" fill="#f4f4f5">System architecture</text>
+  <text x="600" y="80" text-anchor="middle" font-size="15" fill="#8b8b98">Static generation at build time · zero runtime servers · client islands for interaction</text>
+
+  <!-- Layer 1: Content -->
+  <g>
+    <rect x="60" y="120" width="1080" height="120" rx="18" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.10)"/>
+    <text x="84" y="152" font-size="13" letter-spacing="3" fill="#f43f5e">LAYER 01</text>
+    <text x="84" y="180" font-size="22" font-weight="400" fill="#f4f4f5">Curated corpus</text>
+    <text x="84" y="204" font-size="14" fill="#8b8b98">data/risks/*.ts — 45 typed entries, 10 domains, validated by scripts/validate.ts</text>
+    <g font-family="ui-monospace, monospace" font-size="12" fill="#c9c9d1">
+      <rect x="700" y="140" width="150" height="30" rx="8" fill="rgba(255,255,255,0.05)"/><text x="716" y="160">Risk · Signal</text>
+      <rect x="862" y="140" width="150" height="30" rx="8" fill="rgba(255,255,255,0.05)"/><text x="878" y="160">Precaution</text>
+      <rect x="1024" y="140" width="96" height="30" rx="8" fill="rgba(255,255,255,0.05)"/><text x="1040" y="160">Advancement</text>
+    </g>
+  </g>
+
+  <!-- Layer 2: Build -->
+  <g>
+    <rect x="60" y="270" width="1080" height="120" rx="18" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.10)"/>
+    <text x="84" y="302" font-size="13" letter-spacing="3" fill="#fbbf24">LAYER 02</text>
+    <text x="84" y="330" font-size="22" font-weight="400" fill="#f4f4f5">Build-time pipeline</text>
+    <text x="84" y="354" font-size="14" fill="#8b8b98">next build · static prerender of all 46 routes · slim view models at client boundaries</text>
+    <g font-family="ui-monospace, monospace" font-size="12" fill="#c9c9d1">
+      <rect x="700" y="290" width="150" height="30" rx="8" fill="rgba(255,255,255,0.05)"/><text x="716" y="310">lib/scoring.ts</text>
+      <rect x="862" y="290" width="150" height="30" rx="8" fill="rgba(255,255,255,0.05)"/><text x="878" y="310">lib/views.ts</text>
+      <rect x="1024" y="290" width="96" height="30" rx="8" fill="rgba(255,255,255,0.05)"/><text x="1040" y="310">sitemap</text>
+    </g>
+  </g>
+
+  <!-- Layer 3: Edge -->
+  <g>
+    <rect x="60" y="420" width="1080" height="120" rx="18" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.10)"/>
+    <text x="84" y="452" font-size="13" letter-spacing="3" fill="#38bdf8">LAYER 03</text>
+    <text x="84" y="480" font-size="22" font-weight="400" fill="#f4f4f5">Edge delivery</text>
+    <text x="84" y="504" font-size="14" fill="#8b8b98">Vercel edge network · HTML + JS + CSS only · no API keys, no database, no backend</text>
+    <g font-family="ui-monospace, monospace" font-size="12" fill="#c9c9d1">
+      <rect x="700" y="440" width="150" height="30" rx="8" fill="rgba(255,255,255,0.05)"/><text x="716" y="460">CDN cache</text>
+      <rect x="862" y="440" width="150" height="30" rx="8" fill="rgba(255,255,255,0.05)"/><text x="878" y="460">OG image</text>
+      <rect x="1024" y="440" width="96" height="30" rx="8" fill="rgba(255,255,255,0.05)"/><text x="1040" y="460">robots</text>
+    </g>
+  </g>
+
+  <!-- Layer 4: Client -->
+  <g>
+    <rect x="60" y="570" width="1080" height="80" rx="18" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.10)"/>
+    <text x="84" y="602" font-size="13" letter-spacing="3" fill="#34d399">LAYER 04</text>
+    <text x="84" y="628" font-size="22" font-weight="400" fill="#f4f4f5">Client islands</text>
+    <text x="330" y="628" font-size="14" fill="#8b8b98">⌘K command palette · atlas filters · signals board · local-only preparedness plan (localStorage)</text>
+  </g>
+
+  <!-- edges -->
+  <g stroke="url(#edge)" stroke-width="1.5" fill="none" marker-end="url(#arrow)">
+    <path d="M600 240 V262"/>
+    <path d="M600 390 V412"/>
+    <path d="M600 540 V562"/>
+  </g>
+</svg>

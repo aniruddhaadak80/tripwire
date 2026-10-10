@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" font-family="ui-sans-serif, system-ui, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#8b8b98"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="675" fill="#0a0a0c"/>
+  <g stroke="rgba(255,255,255,0.045)" stroke-width="1">
+    <path d="M0 135 H1200 M0 270 H1200 M0 405 H1200 M0 540 H1200"/>
+    <path d="M200 0 V675 M400 0 V675 M600 0 V675 M800 0 V675 M1000 0 V675"/>
+  </g>
+
+  <text x="600" y="52" text-anchor="middle" font-size="30" font-weight="300" fill="#f4f4f5">Scoring pipeline</text>
+  <text x="600" y="80" text-anchor="middle" font-size="15" fill="#8b8b98">Four editorial scores become two ranking numbers — computed at build time, displayed everywhere</text>
+
+  <!-- inputs -->
+  <g font-size="13" fill="#c9c9d1">
+    <rect x="60" y="120" width="240" height="72" rx="14" fill="rgba(244,63,94,0.10)" stroke="rgba(244,63,94,0.35)"/>
+    <text x="80" y="150" font-size="17" fill="#f4f4f5">Likelihood</text>
+    <text x="80" y="174" font-size="12" fill="#8b8b98">chance it bites in ~10 yrs</text>
+
+    <rect x="60" y="220" width="240" height="72" rx="14" fill="rgba(251,146,60,0.10)" stroke="rgba(251,146,60,0.35)"/>
+    <text x="80" y="250" font-size="17" fill="#f4f4f5">Severity</text>
+    <text x="80" y="274" font-size="12" fill="#8b8b98">worst-case damage</text>
+
+    <rect x="60" y="320" width="240" height="72" rx="14" fill="rgba(251,191,36,0.10)" stroke="rgba(251,191,36,0.35)"/>
+    <text x="80" y="350" font-size="17" fill="#f4f4f5">Speed</text>
+    <text x="80" y="374" font-size="12" fill="#8b8b98">how fast it hits once triggered</text>
+
+    <rect x="60" y="420" width="240" height="72" rx="14" fill="rgba(52,211,153,0.10)" stroke="rgba(52,211,153,0.35)"/>
+    <text x="80" y="450" font-size="17" fill="#f4f4f5">Defence</text>
+    <text x="80" y="474" font-size="12" fill="#8b8b98">how well we are doing (higher = better)</text>
+  </g>
+
+  <!-- exposure -->
+  <rect x="400" y="170" width="300" height="180" rx="18" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.14)"/>
+  <text x="424" y="204" font-size="13" letter-spacing="3" fill="#f43f5e">EXPOSURE</text>
+  <text x="424" y="236" font-size="19" fill="#f4f4f5">likelihood × (0.62 + 0.38 × severity)</text>
+  <text x="424" y="262" font-size="19" fill="#f4f4f5)">× speed bump (≤ 12%)</text>
+  <text x="424" y="300" font-size="13" fill="#8b8b98">the number the atlas sorts by</text>
+  <text x="424" y="322" font-size="13" fill="#8b8b98">band: critical ≥ 72 · elevated ≥ 56 · watch ≥ 40</text>
+
+  <!-- priority -->
+  <rect x="400" y="390" width="300" height="150" rx="18" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.14)"/>
+  <text x="424" y="424" font-size="13" letter-spacing="3" fill="#fbbf24">ACTION PRIORITY</text>
+  <text x="424" y="456" font-size="19" fill="#f4f4f5">exposure × (1 − 0.7 × defence)</text>
+  <text x="424" y="494" font-size="13" fill="#8b8b98">discounts what we have already solved</text>
+  <text x="424" y="516" font-size="13" fill="#8b8b98">surfaces the dangerous-and-ignored</text>
+
+  <!-- outputs -->
+  <g font-size="13" fill="#c9c9d1">
+    <rect x="820" y="140" width="320" height="80" rx="14" fill="rgba(139,92,246,0.10)" stroke="rgba(139,92,246,0.35)"/>
+    <text x="844" y="172" font-size="17" fill="#f4f4f5">Atlas board</text>
+    <text x="844" y="196" font-size="12" fill="#8b8b98">default sort · domain + band filters</text>
+
+    <rect x="820" y="250" width="320" height="80" rx="14" fill="rgba(139,92,246,0.10)" stroke="rgba(139,92,246,0.35)"/>
+    <text x="844" y="282" font-size="17" fill="#f4f4f5">Start here</text>
+    <text x="844" y="306" font-size="12" fill="#8b8b98">top 3 by action priority</text>
+
+    <rect x="820" y="360" width="320" height="80" rx="14" fill="rgba(52,211,153,0.10)" stroke="rgba(52,211,153,0.35)"/>
+    <text x="844" y="392" font-size="17" fill="#f4f4f5">Signals board</text>
+    <text x="844" y="416" font-size="12" fill="#8b8b98">sorted by signal loudness</text>
+
+    <rect x="820" y="470" width="320" height="80" rx="14" fill="rgba(56,189,248,0.10)" stroke="rgba(56,189,248,0.35)"/>
+    <text x="844" y="502" font-size="17" fill="#f4f4f5">Preparedness</text>
+    <text x="844" y="526" font-size="12" fill="#8b8b98">highest-yield actions for you</text>
+  </g>
+
+  <!-- edges -->
+  <g stroke="#8b8b98" stroke-width="1.5" fill="none" marker-end="url(#arr)">
+    <path d="M300 156 C 350 156, 360 220, 392 236"/>
+    <path d="M300 256 C 350 256, 360 250, 392 252"/>
+    <path d="M300 356 C 350 356, 360 300, 392 288"/>
+    <path d="M700 260 C 760 260, 760 180, 812 180"/>
+    <path d="M550 350 C 550 372, 550 376, 550 384"/>
+    <path d="M700 465 C 760 465, 760 290, 812 290"/>
+    <path d="M700 505 C 760 505, 760 400, 812 400"/>
+    <path d="M700 505 C 760 505, 760 510, 812 510"/>
+  </g>
+</svg>

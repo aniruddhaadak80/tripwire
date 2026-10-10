@@ -1,0 +1,49 @@
+name: Content correction
+description: Fix an indicator, score, status, source or precaution in an existing entry
+labels: [content]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharpening the atlas. Please fill in every section — corrections without evidence get closed.
+  - type: input
+    id: entry
+    attributes:
+      label: Entry (slug or title)
+      placeholder: e.g. amoc-collapse
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What needs correcting?
+      options:
+        - Indicator / reading / history
+        - Score (likelihood, severity, speed, defence)
+        - Mitigation status or progress
+        - Precaution
+        - Source
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current value
+      description: Quote the current text or number.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed value
+      description: What should it be instead?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Link the primary source that supports the correction. No invented precision — ranges or ≈ where uncertain.
+    validations:
+      required: true
