@@ -6,6 +6,7 @@ import { Meter, Radar, Sparkline } from "@/components/charts";
 import { DomainGlyph } from "@/components/domain-icon";
 import { PrecautionPanel } from "@/components/precaution-panel";
 import { Reveal } from "@/components/reveal";
+import { ScoreLab } from "@/components/score-lab";
 import { RiskRow } from "@/components/risk-card";
 import { getDomain } from "@/data/domains";
 import { getRisk, risks } from "@/data";
@@ -180,6 +181,13 @@ export default async function RiskPage({ params }: { params: Promise<{ slug: str
             ))}
           </div>
         </div>
+      </section>
+
+      {/* ------------------------------------------------------ Score lab */}
+      <section className="mt-16">
+        <Reveal>
+          <ScoreLab risk={risk} />
+        </Reveal>
       </section>
 
       {/* ------------------------------------------------------ Signals */}

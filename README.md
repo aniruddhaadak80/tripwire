@@ -116,6 +116,10 @@ Domains, mean exposure and their loudest entry:
   `/prepare`
 - **Deep dives** — radar profile, warning signs, precautions by audience, mitigation maturity,
   timeline, connected risks and primary sources. `/risk/[slug]`
+- **Counterfactual score lab** — on every deep-dive: drag any of the four editorial scores and
+  watch exposure, action priority, band and the radar shape update live. `/risk/[slug]`
+- **Public data API** — the whole corpus as static JSON plus an RSS feed of the loudest signals.
+  No backend, no keys, no rate limits. `/data`
 - **⌘K command palette** — search across risks, indicators, precautions and mitigations
 - **Method page** — the full scoring model, editorial rules and stated limits. `/method`
 - **Static everything** — 46 prerendered pages, no backend, no database, no keys
@@ -351,9 +355,11 @@ the issue templates: **content correction**, **new risk proposal**, **bug report
 - [x] ⌘K command palette, signals board, method page
 - [x] Generated OG image, sitemap, robots, canonicals
 - [x] Real screenshots + architecture/scoring/data-model diagrams
+- [x] Counterfactual score lab on every deep-dive
+- [x] Public JSON API + RSS feed of the loudest signals
 - [ ] Weekly signal-refresh cadence (indicator readings pulled from cited sources)
 - [ ] Email/Atom digest of the week's loudest signals
-- [ ] Per-risk "what would change my score" — counterfactual editor for policy options
+- [ ] Per-domain "what would change my score" — counterfactual editor for policy options (partially shipped — the four-axis lab)
 
 ## License
 

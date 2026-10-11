@@ -153,6 +153,42 @@
     background-size: 64px 64px;
   }
 
+  /* Counterfactual sliders — thin track, signal-coloured thumb */
+  .score-range {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 3px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+    cursor: pointer;
+  }
+  .score-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 999px;
+    background: #f43f5e;
+    border: 2px solid #050506;
+    box-shadow: 0 0 0 1px rgba(244, 63, 94, 0.45), 0 0 12px rgba(244, 63, 94, 0.35);
+    transition:
+      transform 0.3s cubic-bezier(0.32, 0.72, 0, 1),
+      box-shadow 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+  }
+  .score-range::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 0 1px rgba(244, 63, 94, 0.7), 0 0 18px rgba(244, 63, 94, 0.55);
+  }
+  .score-range::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 999px;
+    background: #f43f5e;
+    border: 2px solid #050506;
+    box-shadow: 0 0 0 1px rgba(244, 63, 94, 0.45), 0 0 12px rgba(244, 63, 94, 0.35);
+  }
+
   .scanlines {
     background-image: repeating-linear-gradient(
       to bottom,
@@ -191,5 +227,47 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* Print: the preparedness plan should survive a power cut */
+@media print {
+  body {
+    background: #fff !important;
+    color: #111 !important;
+  }
+  nav,
+  footer,
+  .plate-core::before,
+  .pointer-events-none {
+    display: none !important;
+  }
+  .plate {
+    break-inside: avoid;
+    border: 1px solid #ddd !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+  .plate-core {
+    background: #fff !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 10px;
+    color: #666;
+  }
+  h1,
+  h2,
+  h3 {
+    color: #111 !important;
+  }
+  p,
+  li,
+  span,
+  div {
+    color: #222 !important;
   }
 }

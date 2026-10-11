@@ -1,0 +1,84 @@
+{
+  "site": "https://tripwire-atlas.vercel.app",
+  "generatedAt": "2026-10-11T22:23:44.609Z",
+  "counts": {
+    "risks": 45,
+    "signals": 180,
+    "precautions": 311,
+    "individualPrecautions": 189,
+    "advancements": 225,
+    "sources": 244
+  },
+  "domains": [
+    {
+      "id": "ai",
+      "name": "Machine Intelligence",
+      "entries": 6,
+      "meanExposure": 51,
+      "topRisk": "evaluator-ginning"
+    },
+    {
+      "id": "climate",
+      "name": "Climate & Earth Systems",
+      "entries": 6,
+      "meanExposure": 63,
+      "topRisk": "heat-domes"
+    },
+    {
+      "id": "bio",
+      "name": "Biology & Pandemics",
+      "entries": 3,
+      "meanExposure": 64,
+      "topRisk": "amr"
+    },
+    {
+      "id": "cyber",
+      "name": "Cyber & Infrastructure",
+      "entries": 5,
+      "meanExposure": 85,
+      "topRisk": "ransomware-ice"
+    },
+    {
+      "id": "nuclear",
+      "name": "Nuclear & Material Risk",
+      "entries": 3,
+      "meanExposure": 34,
+      "topRisk": "miscalculation-escalation"
+    },
+    {
+      "id": "finance",
+      "name": "Financial System",
+      "entries": 5,
+      "meanExposure": 67,
+      "topRisk": "liquidity-fragility"
+    },
+    {
+      "id": "info",
+      "name": "Information & Society",
+      "entries": 4,
+      "meanExposure": 82,
+      "topRisk": "synthetic-evidence"
+    },
+    {
+      "id": "infrastructure",
+      "name": "Physical Infrastructure",
+      "entries": 4,
+      "meanExposure": 68,
+      "topRisk": "grid-overload-cascade"
+    },
+    {
+      "id": "space",
+      "name": "Orbit & Space Weather",
+      "entries": 3,
+      "meanExposure": 55,
+      "topRisk": "gnss-interference"
+    },
+    {
+      "id": "self",
+      "name": "Personal Exposure",
+      "entries": 6,
+      "meanExposure": 58,
+      "topRisk": "identity-theft"
+    }
+  ]
+}

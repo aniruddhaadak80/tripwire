@@ -10,7 +10,10 @@
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
-    "validate": "bun run scripts/validate.ts"
+    "validate": "bun run scripts/validate.ts",
+    "export:data": "bun run scripts/export-data.ts",
+    "shots": "bun run scripts/screenshots.ts",
+    "shots:web": "bun run scripts/compress-shots.ts"
   },
   "dependencies": {
     "lucide-react": "^1.54.0",

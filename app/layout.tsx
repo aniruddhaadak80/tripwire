@@ -66,6 +66,10 @@ export const metadata: Metadata = {
   category: "technology",
 };
 
+export const viewport = {
+  themeColor: "#050506",
+};
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   const docs = buildSearchIndex(risks, (id) => getDomain(id).name);
 
@@ -74,6 +78,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="alternate" type="application/rss+xml" title="Tripwire — loudest signals" href="/feed.xml" />
+      </head>
       <body className="min-h-full">
         <CommandProvider docs={docs}>
           <Atmosphere />
