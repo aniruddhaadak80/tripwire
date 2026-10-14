@@ -81,8 +81,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <head>
         <link rel="alternate" type="application/rss+xml" title="Tripwire — loudest signals" href="/feed.xml" />
       </head>
-      <body className="min-h-full">
-        <CommandProvider docs={docs}>
+      <body className="min-h-full">        <CommandProvider docs={docs}>
           <Atmosphere />
           <Nav count={risks.length} />
           <main className="relative z-10">{children}</main>

@@ -18,9 +18,14 @@ const CHROME =
 const pages: { name: string; path: string; full?: boolean }[] = [
   { name: "home", path: "/", full: true },
   { name: "atlas", path: "/atlas", full: true },
+  { name: "matrix", path: "/matrix", full: true },
+  { name: "timeline", path: "/timeline", full: true },
   { name: "signals", path: "/signals", full: true },
   { name: "prepare", path: "/prepare", full: true },
   { name: "method", path: "/method", full: true },
+  { name: "data", path: "/data", full: true },
+  { name: "compare", path: "/compare?slugs=ransomware-ice,amoc-collapse", full: true },
+  { name: "domain", path: "/domain/ai", full: true },
   { name: "risk-detail", path: "/risk/loss-of-control", full: true },
   { name: "risk-climate", path: "/risk/amoc-collapse", full: true },
 ];

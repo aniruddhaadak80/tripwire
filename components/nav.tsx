@@ -8,6 +8,8 @@ import { SearchTrigger } from "./command";
 
 const links = [
   { href: "/atlas", label: "Atlas" },
+  { href: "/matrix", label: "Matrix" },
+  { href: "/timeline", label: "Timeline" },
   { href: "/signals", label: "Signals" },
   { href: "/prepare", label: "Prepare" },
   { href: "/method", label: "Method" },

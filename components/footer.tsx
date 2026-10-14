@@ -32,8 +32,11 @@ export function Footer({
           <ul className="mt-5 space-y-3">
             {[
               { href: "/atlas", label: "The atlas" },
+              { href: "/matrix", label: "Risk matrix" },
+              { href: "/timeline", label: "Timeline" },
               { href: "/signals", label: "Signals board" },
               { href: "/prepare", label: "Preparedness" },
+              { href: "/data", label: "Public data" },
               { href: "/method", label: "Scoring method" },
             ].map((l) => (
               <li key={l.href}>

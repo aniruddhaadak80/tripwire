@@ -5,145 +5,145 @@
     <link>https://tripwire-atlas.vercel.app</link>
     <description>The twenty loudest early-warning indicators across the atlas, refreshed on every deploy.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 11 Oct 2026 22:23:44 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 04:47:03 GMT</lastBuildDate>
     <item>
       <title>Safety-case threshold escalations — Loss of control: the system stops taking orders</title>
       <link>https://tripwire-atlas.vercel.app/risk/loss-of-control</link>
       <guid isPermaLink="false">loss-of-control:safety-escalations</guid>
-      <pubDate>Sun, 11 Oct 2026 22:23:44 GMT</pubDate>
+      <pubDate>Wed, 14 Oct 2026 04:47:03 GMT</pubDate>
       <description>None declared as of late 2025, under policies that would require one to be declared · Silence is ambiguous. It can mean no threshold was crossed, or that one was crossed quietly. Both are worth knowing about.</description>
     </item>
     <item>
       <title>States sharing pathogen sequence data internationally — Engineered and released pandemics</title>
       <link>https://tripwire-atlas.vercel.app/risk/engineered-pandemic</link>
       <guid isPermaLink="false">engineered-pandemic:gisaid-sharing</guid>
-      <pubDate>Sun, 11 Oct 2026 22:23:44 GMT</pubDate>
+      <pubDate>Wed, 14 Oct 2026 04:47:03 GMT</pubDate>
       <description>≈159 countries active in the last month, a slow but steady climb from ≈140 in 2015; sharing still lags detection by weeks · This is the one genuinely better-moving number: the first weeks of a new pathogen are now much more legible than they were in 2015.</description>
     </item>
     <item>
       <title>Signed provenance at the point of capture — Data integrity attacks and the trust collapse</title>
       <link>https://tripwire-atlas.vercel.app/risk/data-integrity-attack</link>
       <guid isPermaLink="false">data-integrity-attack:content-credentials</guid>
-      <pubDate>Sun, 11 Oct 2026 22:23:44 GMT</pubDate>
+      <pubDate>Wed, 14 Oct 2026 04:47:03 GMT</pubDate>
       <description>Still a small minority of camera makers and platforms, with signing metadata stripped by most upload pipelines · This is the only fix that scales: cryptographically sign the image at the sensor, so editing breaks the chain. It only works if the signature survives the upload, and right now most pipelines throw it away.</description>
     </item>
     <item>
       <title>Share of US generation cooled without water — Water system dependency</title>
       <link>https://tripwire-atlas.vercel.app/risk/water-system-dependency</link>
       <guid isPermaLink="false">water-system-dependency:dry-cooling-share</guid>
-      <pubDate>Sun, 11 Oct 2026 22:23:44 GMT</pubDate>
+      <pubDate>Wed, 14 Oct 2026 04:47:03 GMT</pubDate>
       <description>Roughly 8 percent dry cooling, about two thirds closed-loop towers and about a quarter once-through. Most of the fleet still needs water to run at all · The share has not moved in a decade. Dry cooling removes the dependency but costs money and output at high ambient temperatures, which is exactly when you would need it, so it stays rare without a mandate.</description>
     </item>
     <item>
       <title>Duration of issuer reserve assets — Stablecoin and digital-asset run dynamics</title>
       <link>https://tripwire-atlas.vercel.app/risk/stablecoin-run</link>
       <guid isPermaLink="false">stablecoin-run:reserve-duration</guid>
-      <pubDate>Sun, 11 Oct 2026 22:23:44 GMT</pubDate>
+      <pubDate>Wed, 14 Oct 2026 04:47:03 GMT</pubDate>
       <description>The largest issuer holds the overwhelming majority of reserves in overnight and short bills, though the share in slightly longer assets has crept up since 2024 · Short-dated reserves are what make one-dollar redemptions work smoothly, and they are exactly what cannot absorb a run without asset sales.</description>
     </item>
     <item>
       <title>Reported trust in AI companies — Institutional trust decay</title>
       <link>https://tripwire-atlas.vercel.app/risk/institutional-trust-decay</link>
       <guid isPermaLink="false">institutional-trust-decay:ai-institution-trust</guid>
-      <pubDate>Sun, 11 Oct 2026 22:23:44 GMT</pubDate>
+      <pubDate>Wed, 14 Oct 2026 04:47:03 GMT</pubDate>
       <description>Around 7 in 10, notably higher than trust in most comparable technologies · It shows the institutional trust ceiling is not uniformly low, and it is the pool that synthetic-evidence and polarisation attacks are drawing down.</description>
     </item>
     <item>
       <title>Collection contact — The debt cascade</title>
       <link>https://tripwire-atlas.vercel.app/risk/debt-cascade</link>
       <guid isPermaLink="false">debt-cascade:collection-contact</guid>
-      <pubDate>Sun, 11 Oct 2026 22:23:44 GMT</pubDate>
+      <pubDate>Wed, 14 Oct 2026 04:47:03 GMT</pubDate>
       <description>0 collection contacts in 12 months · The first collection call is the last cheap moment to fix this. After that, reporting and litigation costs appear.</description>
     </item>
     <item>
       <title>Notice and severance terms — Income single point of failure</title>
       <link>https://tripwire-atlas.vercel.app/risk/income-single-point</link>
       <guid isPermaLink="false">income-single-point:notice-terms</guid>
-      <pubDate>Sun, 11 Oct 2026 22:23:44 GMT</pubDate>
+      <pubDate>Wed, 14 Oct 2026 04:47:03 GMT</pubDate>
       <description>≈4 weeks of guaranteed notice · Knowing this number before you need it turns a panic into a calculation.</description>
     </item>
     <item>
       <title>Human review coverage of agent actions — Loss of control: the system stops taking orders</title>
       <link>https://tripwire-atlas.vercel.app/risk/loss-of-control</link>
       <guid isPermaLink="false">loss-of-control:review-coverage</guid>
-      <pubDate>Sun, 11 Oct 2026 22:23:44 GMT</pubDate>
+      <pubDate>Wed, 14 Oct 2026 04:47:03 GMT</pubDate>
       <description>Low single-digit percent in most deployments, and no major vendor publishes this by default · Review coverage is the load-bearing part of supervision; when it nears zero, oversight is a slogan.</description>
     </item>
     <item>
       <title>AI-written biology papers caught by preprint biosecurity screening — Engineered and released pandemics</title>
       <link>https://tripwire-atlas.vercel.app/risk/engineered-pandemic</link>
       <guid isPermaLink="false">engineered-pandemic:ai-preprint-flags</guid>
-      <pubDate>Sun, 11 Oct 2026 22:23:44 GMT</pubDate>
+      <pubDate>Wed, 14 Oct 2026 04:47:03 GMT</pubDate>
       <description>≈50 flagged papers in the latest month, against single digits when the screening began in late 2024; roughly a fifth of flagged items are substantially AI-generated rather than AI-assisted · Model-assisted experimental protocols and literature synthesis lower the effort floor for exactly the kind of work you would want screened before it is public.</description>
     </item>
     <item>
       <title>Reported close calls and nuclear safety incidents — Miscalculation and false alarm escalation</title>
       <link>https://tripwire-atlas.vercel.app/risk/miscalculation-escalation</link>
       <guid isPermaLink="false">miscalculation-escalation:close-call-incidents</guid>
-      <pubDate>Sun, 11 Oct 2026 22:23:44 GMT</pubDate>
+      <pubDate>Wed, 14 Oct 2026 04:47:03 GMT</pubDate>
       <description>3–4 significant events per year in recent years, mostly involving fighter aircraft intercepts and accidental missile launches caught by human oversight rather than by any warning system · Each one is a rehearsal for the real thing. The pattern to watch is a rising share involving new categories — drones, cyber, space objects — rather than aircraft.</description>
     </item>
     <item>
       <title>On-alert deployments of non-strategic nuclear weapons — Miscalculation and false alarm escalation</title>
       <link>https://tripwire-atlas.vercel.app/risk/miscalculation-escalation</link>
       <guid isPermaLink="false">miscalculation-escalation:tactical-nukes-posture</guid>
-      <pubDate>Sun, 11 Oct 2026 22:23:44 GMT</pubDate>
+      <pubDate>Wed, 14 Oct 2026 04:47:03 GMT</pubDate>
       <description>2–3 deployments per year by nuclear-armed states, up sharply from 2015 and 2016 when the practice was effectively dormant · Tactical movements combine a nuclear weapon with an active regional conflict, which is the most likely real-world scenario for a nuclear incident.</description>
     </item>
     <item>
       <title>States with a published human-in-the-loop policy for nuclear AI — Machine-speed nuclear decision making</title>
       <link>https://tripwire-atlas.vercel.app/risk/machine-speed-decision</link>
       <guid isPermaLink="false">machine-speed-decision:autonomy-policy-gap</guid>
-      <pubDate>Sun, 11 Oct 2026 22:23:44 GMT</pubDate>
+      <pubDate>Wed, 14 Oct 2026 04:47:03 GMT</pubDate>
       <description>About 2 states have issued meaningful human-control requirements as of 2026; none has published verification, testing or audit arrangements to show the requirement is enforced · A policy that cannot be audited is not a safety mechanism. The gap between policy text and verification is the measurable risk here.</description>
     </item>
     <item>
       <title>Spending on nuclear command and control modernisation — Machine-speed nuclear decision making</title>
       <link>https://tripwire-atlas.vercel.app/risk/machine-speed-decision</link>
       <guid isPermaLink="false">machine-speed-decision:c2-modernisation-budgets</guid>
-      <pubDate>Sun, 11 Oct 2026 22:23:44 GMT</pubDate>
+      <pubDate>Wed, 14 Oct 2026 04:47:03 GMT</pubDate>
       <description>Roughly $30 billion a year across declared nuclear powers by 2025, up from about $20 billion in the mid-2010s, with AI explicitly named in several procurement pathways · Modernisation brings real gains in survivability and in removing old permissive links, and it is also the channel through which autonomous and AI-dependent functions enter the chain.</description>
     </item>
     <item>
       <title>Global mean sea level rise rate — Compound tipping and the cascade problem</title>
       <link>https://tripwire-atlas.vercel.app/risk/compound-tipping</link>
       <guid isPermaLink="false">compound-tipping:sea-level</guid>
-      <pubDate>Sun, 11 Oct 2026 22:23:44 GMT</pubDate>
+      <pubDate>Wed, 14 Oct 2026 04:47:03 GMT</pubDate>
       <description>About 4.3 millimetres a year in 2024, roughly double the rate measured through the 1990s · Sea level integrates the ocean, cryosphere and land-ice components into a single number, and its accelerating rate is the most legible public trace of a coupled system leaving steady state.</description>
     </item>
     <item>
       <title>Antarctic ice sheet mass loss — Compound tipping and the cascade problem</title>
       <link>https://tripwire-atlas.vercel.app/risk/compound-tipping</link>
       <guid isPermaLink="false">compound-tipping:antarctic-loss</guid>
-      <pubDate>Sun, 11 Oct 2026 22:23:44 GMT</pubDate>
+      <pubDate>Wed, 14 Oct 2026 04:47:03 GMT</pubDate>
       <description>Roughly 150 gigatonnes lost per year, essentially all of it concentrated in West Antarctica and none of it reversing · West Antarctic loss is the classic marine ice-sheet instability case, and it couples to sea level, ocean circulation and shoreline stability at the same time.</description>
     </item>
     <item>
       <title>Arctic amplification — Compound tipping and the cascade problem</title>
       <link>https://tripwire-atlas.vercel.app/risk/compound-tipping</link>
       <guid isPermaLink="false">compound-tipping:arctic-warming</guid>
-      <pubDate>Sun, 11 Oct 2026 22:23:44 GMT</pubDate>
+      <pubDate>Wed, 14 Oct 2026 04:47:03 GMT</pubDate>
       <description>Around 3.5 to 4 degrees Celsius of Arctic warming since the 1980s, several times the global mean · Arctic warming drives permafrost thaw, sea ice loss and glacier melt together, and those are the upstream inputs to several of the other elements in this list.</description>
     </item>
     <item>
       <title>Greenland ice sheet mass loss — AMOC collapse: the Atlantic stops flowing</title>
       <link>https://tripwire-atlas.vercel.app/risk/amoc-collapse</link>
       <guid isPermaLink="false">amoc-collapse:greenland-loss</guid>
-      <pubDate>Sun, 11 Oct 2026 22:23:44 GMT</pubDate>
+      <pubDate>Wed, 14 Oct 2026 04:47:03 GMT</pubDate>
       <description>Roughly 260 gigatonnes of ice lost per year on a 2002-2023 average, with no year of net gain · Greenland is the largest freshwater source capable of pushing the circulation toward its threshold, so its loss rate is the upstream control on everything else in this entry.</description>
     </item>
     <item>
       <title>Human hours per drafted protocol — AI-assisted pathogen design</title>
       <link>https://tripwire-atlas.vercel.app/risk/ai-assisted-bio</link>
       <guid isPermaLink="false">ai-assisted-bio:protocol-hours</guid>
-      <pubDate>Sun, 11 Oct 2026 22:23:44 GMT</pubDate>
+      <pubDate>Wed, 14 Oct 2026 04:47:03 GMT</pubDate>
       <description>Studies commonly report two to five times less drafting and troubleshooting time · This is the quiet signal: it lowers the cost of competent biology in general, and the same number applies to the work you would rather nobody did.</description>
     </item>
     <item>
       <title>High-bandwidth memory price index — Semiconductor concentration risk</title>
       <link>https://tripwire-atlas.vercel.app/risk/semiconductor-concentration</link>
       <guid isPermaLink="false">semiconductor-concentration:hbm-price</guid>
-      <pubDate>Sun, 11 Oct 2026 22:23:44 GMT</pubDate>
+      <pubDate>Wed, 14 Oct 2026 04:47:03 GMT</pubDate>
       <description>Prices rose about 30 percent in 2026 with a projected supply gap above 20 percent in 2027. This is a scarcity price, not a shortage price · A rising price curve is the market telling you the memory makers also cannot add capacity fast enough. It is the earliest honest signal that the compute buildout has outrun physical supply.</description>
     </item>
   </channel>

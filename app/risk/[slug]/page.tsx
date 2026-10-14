@@ -97,6 +97,22 @@ export default async function RiskPage({ params }: { params: Promise<{ slug: str
             {risk.title}
           </h1>
 
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Dataset",
+                name: `${risk.title} — Tripwire`,
+                description: risk.summary,
+                url: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://tripwire-atlas.vercel.app"}/risk/${risk.slug}`,
+                creator: { "@type": "Organization", name: "Tripwire" },
+                dateModified: risk.updated,
+                keywords: [domain.name, risk.tag, ...risk.affected].join(", "),
+              }),
+            }}
+          />
+
           <p className="mt-7 max-w-2xl text-[17px] leading-relaxed text-ink-300">{risk.summary}</p>
 
           <div className="mt-8 flex flex-wrap gap-2">

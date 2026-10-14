@@ -7,6 +7,7 @@ import { Check, Copy, Download, RotateCcw, ShieldCheck } from "lucide-react";
 import { Gauge, Meter } from "@/components/charts";
 import { DomainGlyph } from "@/components/domain-icon";
 import { getDomain } from "@/data/domains";
+import { downloadIcs } from "@/lib/ics";
 import { planKey, usePlan } from "@/lib/plan";
 import type { DomainId, Horizon } from "@/lib/types";
 import type { PlanItem } from "@/lib/views";
@@ -142,6 +143,13 @@ export function PrepareBoard({ items }: { items: PlanItem[] }) {
               >
                 <Download className="size-3.5" strokeWidth={1.5} />
                 Export .md
+              </button>
+              <button
+                onClick={() => downloadIcs(items, plan)}
+                className="group inline-flex items-center gap-2 rounded-full border border-hairline py-2 pl-4 pr-3 text-[13px] text-ink-300 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:border-hairline-strong hover:text-ink-100"
+              >
+                <Download className="size-3.5" strokeWidth={1.5} />
+                Calendar .ics
               </button>
               <button
                 onClick={copySummary}
