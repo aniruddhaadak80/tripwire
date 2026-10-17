@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { risks } from "@/data";
 
 export const metadata: Metadata = {
   title: "Glossary",

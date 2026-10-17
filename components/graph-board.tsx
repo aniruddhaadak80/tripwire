@@ -24,7 +24,6 @@ export function GraphBoard() {
         exp: exposure(r),
         size: 6 + (exposure(r) / 100) * 10,
       }));
-    const bySlug = new Map(nodes.map((n) => [n.id, n]));
     const edges: Array<{ source: string; target: string; w: number }> = [];
     for (let i = 0; i < risks.length; i++) {
       const a = risks[i];
@@ -32,7 +31,7 @@ export function GraphBoard() {
       for (let j = i + 1; j < risks.length; j++) {
         const b = risks[j];
         if (filter !== "all" && b.domain !== filter) continue;
-        const o = overlap([...a.tags ?? [], ...a.affected], [...b.tags ?? [], ...b.affected]);
+        const o = overlap([...a.affected], [...b.affected]);
         if (o >= 2) {
           edges.push({ source: a.slug, target: b.slug, w: Math.min(6, o) });
         }

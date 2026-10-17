@@ -1,17 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import { risks } from "@/data";
 
 export const metadata: Metadata = {
   title: "Sources bibliography",
-  description: "Every cited source across the atlas with its parent risks.",
+  description: "Every cited source across the atlas, with links to its parent entries.",
   alternates: { canonical: "/sources" },
 };
 
 export default function SourcesPage() {
-  const items = risks.flatMap((r) =>
-    r.sources.map((s) => ({ risk: r, ...s })),
-  ).sort((a,b) => a.year - b.year || a.title.localeCompare(b.title));
+  const items = risks
+    .flatMap((risk) => risk.sources.map((s) => ({ risk, ...s })))
+    .sort((a, b) => (a.year ?? 0) - (b.year ?? 0) || a.label.localeCompare(b.label));
+
+  const years = [...new Set(items.map((i) => i.year).filter(Boolean))] as number[];
 
   return (
     <div className="mx-auto max-w-6xl px-5 pt-32 md:px-8 md:pt-40">
@@ -20,23 +23,35 @@ export default function SourcesPage() {
         <h1 className="mt-8 text-balance text-4xl font-light leading-[1.02] tracking-[-0.03em] md:text-6xl">
           Cited <span className="font-[family-name:var(--font-instrument-serif)] italic text-signal-high">sources</span>
         </h1>
-        <p className="mt-7 max-w-2xl text-[16px] leading-relaxed text-ink-500">{items.length} citations spanning {new Set(items.map(i=>i.year)).size} years.</p>
+        <p className="mt-7 max-w-2xl text-[16px] leading-relaxed text-ink-500">
+          Every citation behind the atlas. {items.length} references from {years.length} distinct years — each links straight to the original publication and to the entry that rests on it.
+        </p>
       </header>
 
-      <div className="mt-14 pb-24 space-y-4">
+      <div className="mt-14 pb-24 space-y-3">
         {items.map((s, i) => (
-          <div key={i} className="plate">
-            <div className="plate-core flex flex-col gap-2 p-4 md:flex-row md:items-center md:justify-between">
-              <div>
-                <p className="text-[14px] text-ink-200">{s.title}</p>
-                <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-ink-700">{s.org} · {s.year}</p>
+          <div key={`${s.url}-${i}`} className="plate">
+            <div className="plate-core flex flex-col gap-3 p-4 md:flex-row md:items-center md:justify-between">
+              <div className="min-w-0">
+                <a
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-start gap-2 text-[14.5px] leading-snug text-ink-200 transition-colors duration-500 hover:text-white"
+                >
+                  <span className="min-w-0">{s.label}</span>
+                  <ArrowUpRight className="mt-1 size-3.5 shrink-0 text-ink-700 transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-ink-300" strokeWidth={1.5} />
+                </a>
+                <p className="mt-1.5 font-mono text-[10px] uppercase tracking-[0.16em] text-ink-700">
+                  {s.year ?? "s.f."} · {new URL(s.url).hostname.replace(/^www\./, "")}
+                </p>
               </div>
-              <div className="flex items-center gap-2">
-                {s.url && (
-                  <a href={s.url} target="_blank" rel="noopener noreferrer" className="rounded-full border border-hairline px-3 py-1.5 text-[11px] text-ink-300 hover:text-ink-100">Open</a>
-                )}
-                <Link href={`/risk/${s.risk.slug}`} className="rounded-full border border-hairline px-3 py-1.5 text-[11px] text-ink-300 hover:text-ink-100">{s.risk.title.slice(0,30)}</Link>
-              </div>
+              <Link
+                href={`/risk/${s.risk.slug}`}
+                className="shrink-0 rounded-full border border-hairline px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-ink-500 transition-colors duration-500 hover:border-hairline-strong hover:text-ink-200"
+              >
+                {s.risk.title.slice(0, 34)}
+              </Link>
             </div>
           </div>
         ))}

@@ -12,8 +12,11 @@
   --color-slate-panel: #101014;
 
   --color-ink-100: #f4f4f5;
+  --color-ink-200: #dedee6;
   --color-ink-300: #c9c9d1;
+  --color-ink-400: #a8a8b4;
   --color-ink-500: #8b8b98;
+  --color-ink-600: #70707c;
   --color-ink-700: #55555f;
 
   --color-hairline: rgba(255, 255, 255, 0.09);

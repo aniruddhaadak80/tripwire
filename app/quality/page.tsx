@@ -12,7 +12,7 @@ export default function QualityPage() {
   const rows = risks.map((r) => {
     const fields = [r.summary, r.affected.length, r.precautions.length, r.signals.length, r.timeline.length, r.sources.length];
     const complete = fields.filter((f) => (typeof f==="number"?f>0:Boolean(f))).length / fields.length * 100;
-    const conf = Math.min(98, 55 + r.sources*9 + r.timeline*1.5);
+    const conf = Math.min(98, 55 + r.sources.length * 9 + r.timeline.length * 1.5);
     const b = band(exposure(r));
     return { r, complete: Math.round(complete), conf: Math.round(conf), band: b };
   }).sort((a,b)=>b.conf-a.conf);

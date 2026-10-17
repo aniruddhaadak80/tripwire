@@ -8,6 +8,7 @@ import { PrecautionPanel } from "@/components/precaution-panel";
 import { Reveal } from "@/components/reveal";
 import { ScoreLab } from "@/components/score-lab";
 import { RiskRow } from "@/components/risk-card";
+import { RelatedRisks } from "@/components/related-risks";
 import { getDomain } from "@/data/domains";
 import { getRisk, risks } from "@/data";
 import {
@@ -482,6 +483,8 @@ export default async function RiskPage({ params }: { params: Promise<{ slug: str
           <ArrowLeft className="size-3 rotate-180 transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-1" strokeWidth={1.5} />
         </Link>
       </div>
+
+      <RelatedRisks slug={risk.slug} />
     </article>
   );
 }

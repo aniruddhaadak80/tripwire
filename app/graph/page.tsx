@@ -16,7 +16,7 @@ export default function GraphPage() {
           How risks <span className="font-[family-name:var(--font-instrument-serif)] italic text-signal-high">connect</span>
         </h1>
         <p className="mt-7 max-w-2xl text-[16px] leading-relaxed text-ink-500">
-          Nodes are risks, edges connect risks that share affected systems or tags. Thicker edges = stronger overlap. Use domain filter to untangle clusters.
+          Nodes are risks, edges connect risks that share affected systems. Thicker edges = stronger overlap. Use the domain filter to untangle clusters.
         </p>
       </header>
       <div className="mt-14 pb-24 h-[70vh]">

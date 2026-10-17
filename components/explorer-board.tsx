@@ -22,54 +22,63 @@ export function ExplorerBoard() {
   const per = 25;
 
   const items = useMemo(() => {
-    let list = risks.map((r) => ({
-      r,
-      exp: exposure(r),
-      pri: actionPriority(r),
-      b: band(exposure(r)),
-    }));
+    let list = [...risks];
     if (q) {
       const s = q.toLowerCase();
       list = list.filter(
-        (x) =>
-          x.r.title.toLowerCase().includes(s) ||
-          x.r.slug.toLowerCase().includes(s) ||
-          x.r.tag.toLowerCase().includes(s) ||
-          x.r.summary.toLowerCase().includes(s) ||
-          x.r.affected.some((a) => a.toLowerCase().includes(s)),
+        (r) =>
+          r.title.toLowerCase().includes(s) ||
+          r.slug.toLowerCase().includes(s) ||
+          r.tag.toLowerCase().includes(s) ||
+          r.summary.toLowerCase().includes(s) ||
+          r.affected.some((a) => a.toLowerCase().includes(s)),
       );
     }
-    if (domain !== "all") list = list.filter((x) => x.r.domain === domain);
-    if (bandf !== "all") list = list.filter((x) => bandLabel[x.b].toLowerCase() === bandf);
-    if (trend !== "all") list = list.filter((x) => x.r.trend === trend);
-    list = rank(list.map((x) => x.r), sort.includes("exposure") ? "exposure" : "priority");
-    // simpler sort by selected
-    if (sort === "exposure-asc") list = [...list].sort((a, b) => exposure(a) - exposure(b));
-    else if (sort === "priority-desc") list = [...list].sort((a, b) => actionPriority(b) - actionPriority(a));
-    else if (sort === "likelihood-desc") list = [...list].sort((a, b) => b.likelihood - a.likelihood);
-    else if (sort === "severity-desc") list = [...list].sort((a, b) => b.severity - a.severity);
-    else if (sort === "speed-desc") list = [...list].sort((a, b) => b.speed - a.speed);
-    else list = rank(list, "exposure"); // desc
+    if (domain !== "all") list = list.filter((r) => r.domain === domain);
+    if (bandf !== "all") list = list.filter((r) => bandLabel[band(exposure(r))].toLowerCase() === bandf);
+    if (trend !== "all") list = list.filter((r) => r.trend === trend);
+
+    switch (sort) {
+      case "exposure-asc":
+        list = [...list].sort((a, b) => exposure(a) - exposure(b));
+        break;
+      case "priority-desc":
+        list = [...list].sort((a, b) => actionPriority(b) - actionPriority(a));
+        break;
+      case "likelihood-desc":
+        list = [...list].sort((a, b) => b.likelihood - a.likelihood);
+        break;
+      case "severity-desc":
+        list = [...list].sort((a, b) => b.severity - a.severity);
+        break;
+      case "speed-desc":
+        list = [...list].sort((a, b) => b.speed - a.speed);
+        break;
+      default:
+        list = rank(list, "exposure");
+    }
     return list;
   }, [q, domain, bandf, trend, sort]);
 
   const pageItems = useMemo(() => items.slice(page * per, (page + 1) * per), [items, page]);
 
   const copyCsv = () => {
-    const headers = ["slug,title,domain,likelihood,severity,speed,defence,exposure,priority,trend"];
-    const rows = items.map((x) => [
-      x.r.slug,
-      JSON.stringify(x.r.title),
-      x.r.domain,
-      x.r.likelihood,
-      x.r.severity,
-      x.r.speed,
-      x.r.defence,
-      exposure(x.r),
-      actionPriority(x.r),
-      x.r.trend,
-    ].join(","));
-    navigator.clipboard.writeText([headers, ...rows].join("\n"));
+    const header = "slug,title,domain,likelihood,severity,speed,defence,exposure,priority,trend";
+    const rows = items.map((r) =>
+      [
+        r.slug,
+        JSON.stringify(r.title),
+        r.domain,
+        r.likelihood,
+        r.severity,
+        r.speed,
+        r.defence,
+        exposure(r),
+        actionPriority(r),
+        r.trend,
+      ].join(","),
+    );
+    navigator.clipboard.writeText([header, ...rows].join("\n"));
   };
 
   return (
@@ -81,16 +90,16 @@ export function ExplorerBoard() {
           placeholder="Search title, slug, tags, affected..."
           className="md:col-span-2 rounded-full border border-hairline bg-transparent px-4 py-2 text-[13px] text-ink-200 outline-none placeholder:text-ink-700"
         />
-        <select value={domain} onChange={(e) => { setDomain(e.target.value as any); setPage(0); }} className="rounded-full border border-hairline bg-transparent px-4 py-2 text-[13px] text-ink-200">
+        <select value={domain} onChange={(e) => { setDomain(e.target.value as typeof domain); setPage(0); }} className="rounded-full border border-hairline bg-transparent px-4 py-2 text-[13px] text-ink-200">
           {DOMAINS.map((d) => <option key={d} value={d}>{d}</option>)}
         </select>
-        <select value={bandf} onChange={(e) => { setBandf(e.target.value as any); setPage(0); }} className="rounded-full border border-hairline bg-transparent px-4 py-2 text-[13px] text-ink-200">
+        <select value={bandf} onChange={(e) => { setBandf(e.target.value as typeof bandf); setPage(0); }} className="rounded-full border border-hairline bg-transparent px-4 py-2 text-[13px] text-ink-200">
           {BANDS.map((b) => <option key={b} value={b}>{b}</option>)}
         </select>
-        <select value={trend} onChange={(e) => { setTrend(e.target.value as any); setPage(0); }} className="rounded-full border border-hairline bg-transparent px-4 py-2 text-[13px] text-ink-200">
+        <select value={trend} onChange={(e) => { setTrend(e.target.value as typeof trend); setPage(0); }} className="rounded-full border border-hairline bg-transparent px-4 py-2 text-[13px] text-ink-200">
           {TRENDS.map((t) => <option key={t} value={t}>{t}</option>)}
         </select>
-        <select value={sort} onChange={(e) => { setSort(e.target.value as any); setPage(0); }} className="rounded-full border border-hairline bg-transparent px-4 py-2 text-[13px] text-ink-200">
+        <select value={sort} onChange={(e) => { setSort(e.target.value as typeof sort); setPage(0); }} className="rounded-full border border-hairline bg-transparent px-4 py-2 text-[13px] text-ink-200">
           {SORTS.map((s) => <option key={s} value={s}>{s}</option>)}
         </select>
       </div>
@@ -126,30 +135,33 @@ export function ExplorerBoard() {
               </tr>
             </thead>
             <tbody>
-              {pageItems.map((x) => (
-                <tr key={x.r.slug} className="border-b border-hairline hover:bg-white/[0.02]">
+              {pageItems.map((x) => {
+                const b = band(exposure(x));
+                return (
+                <tr key={x.slug} className="border-b border-hairline hover:bg-white/[0.02]">
                   <td className="px-4 py-3">
-                    <Link href={`/risk/${x.r.slug}`} className="group inline-flex items-center gap-2 text-ink-200 hover:text-white">
-                      <span className="truncate max-w-[420px]">{x.r.title}</span>
+                    <Link href={`/risk/${x.slug}`} className="group inline-flex items-center gap-2 text-ink-200 hover:text-white">
+                      <span className="truncate max-w-[420px]">{x.title}</span>
                       <ArrowUpRight className="size-3.5 text-ink-700 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </Link>
                   </td>
-                  <td className="px-4 py-3 font-mono text-[10px] uppercase text-ink-600">{x.r.domain}</td>
+                  <td className="px-4 py-3 font-mono text-[10px] uppercase text-ink-600">{x.domain}</td>
                   <td className="px-4 py-3">
-                    <span className="chip" style={{ color: bandColor[x.b] }}>{bandLabel[x.b]}</span>
+                    <span className="chip" style={{ color: bandColor[b] }}>{bandLabel[b]}</span>
                   </td>
-                  <td className="px-4 py-3 font-mono text-ink-300">{exposure(x.r)}</td>
-                  <td className="px-4 py-3 font-mono text-ink-400">{actionPriority(x.r)}</td>
-                  <td className="px-4 py-3 font-mono text-ink-500">{x.r.likelihood}</td>
-                  <td className="px-4 py-3 font-mono text-ink-500">{x.r.severity}</td>
-                  <td className="px-4 py-3 font-mono text-ink-500">{x.r.speed}</td>
-                  <td className="px-4 py-3 font-mono text-ink-500">{x.r.defence}</td>
-                  <td className="px-4 py-3 font-mono text-[10px] uppercase text-ink-600">{x.r.trend}</td>
-                  <td className="px-4 py-3 font-mono text-ink-500">{x.r.signals.length}</td>
-                  <td className="px-4 py-3 font-mono text-ink-500">{x.r.precautions.length}</td>
-                  <td className="px-4 py-3 font-mono text-[10px] text-ink-700">{x.r.updated}</td>
+                  <td className="px-4 py-3 font-mono text-ink-300">{exposure(x)}</td>
+                  <td className="px-4 py-3 font-mono text-ink-400">{actionPriority(x)}</td>
+                  <td className="px-4 py-3 font-mono text-ink-500">{x.likelihood}</td>
+                  <td className="px-4 py-3 font-mono text-ink-500">{x.severity}</td>
+                  <td className="px-4 py-3 font-mono text-ink-500">{x.speed}</td>
+                  <td className="px-4 py-3 font-mono text-ink-500">{x.defence}</td>
+                  <td className="px-4 py-3 font-mono text-[10px] uppercase text-ink-600">{x.trend}</td>
+                  <td className="px-4 py-3 font-mono text-ink-500">{x.signals.length}</td>
+                  <td className="px-4 py-3 font-mono text-ink-500">{x.precautions.length}</td>
+                  <td className="px-4 py-3 font-mono text-[10px] text-ink-700">{x.updated}</td>
                 </tr>
-              ))}
+                );
+              })}
             </tbody>
           </table>
         </div>

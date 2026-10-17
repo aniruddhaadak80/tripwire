@@ -23,7 +23,7 @@ export function ApiPlayground() {
       const r = await fetch(path);
       const text = await r.text();
       setRes(JSON.stringify({ status: r.status, ok: r.ok, len: text.length, preview: text.slice(0, 4000) }, null, 2));
-    } catch (e: any) {
+    } catch (e) {
       setRes(String(e));
     } finally {
       setLoading(false);
