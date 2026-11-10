@@ -16,7 +16,7 @@
     "shots:web": "bun run scripts/compress-shots.ts"
   },
   "dependencies": {
-    "lucide-react": "^1.54.0",
+    "lucide-react": "^1.70.0",
     "motion": "^14.0.0",
     "next": "16.4.6",
     "react": "19.3.0",
