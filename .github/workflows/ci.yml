@@ -29,6 +29,11 @@ jobs:
       - name: Lint
         run: bun run lint
 
+      # `next-env.d.ts` and the route types are generated, not committed, so
+      # the global `LayoutProps` type only exists after `next typegen` runs.
+      - name: Generate route types
+        run: bunx next typegen
+
       - name: Typecheck
         run: bun run typecheck
 
