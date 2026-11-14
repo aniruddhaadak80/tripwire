@@ -16,7 +16,7 @@
     "eslint-config-next": "16.4.6",
     "puppeteer-core": "^25.13.0",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^7"
   },
   "ignoreScripts": [
     "sharp",
